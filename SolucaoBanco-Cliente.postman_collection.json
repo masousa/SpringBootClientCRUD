@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "1cc9fd79-570c-486e-93a3-912ab2b9db17",
+		"name": "SolucaoBanco-Cliente",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4658748"
+	},
+	"item": [
+		{
+			"name": "[POST] add cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cpf\":\"63479957862\",\n    \"nome\":\"Gael Marcos Vinicius Peixoto\",\n    \"numero\": 629,\n    \"logradouro\":\"Rua Maria Luíza da Silva\",\n    \"cidade\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[POST] ADD client 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nome\": \"Manuel Murilo Silva\",\n  \"enderecoRequisicao\": {\n    \"numero\": 868,\n    \"logradouro\": \"Avenida Celestino Rosalino\",\n    \"cep\": \"76960076\"\n  },\n  \"cpf\": \"68849420293\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] Consultar Cliente",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/cliente/:identificador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"cliente",
+						":identificador"
+					],
+					"variable": [
+						{
+							"key": "identificador",
+							"value": "b92d6296-dd04-4670-99c1-e4631414a833"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] Listar Cliente",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[DELETE] Remover Cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/cliente/:identificador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"cliente",
+						":identificador"
+					],
+					"variable": [
+						{
+							"key": "identificador",
+							"value": "57d2c0b3-9cf2-47f8-8443-c3b06f95f808"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[PATCH] Alterar Cliente",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nome\": \"Kaique Oliver Theo Barbosa\"\n  \n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/cliente/:identificador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"cliente",
+						":identificador"
+					],
+					"variable": [
+						{
+							"key": "identificador",
+							"value": "57d2c0b3-9cf2-47f8-8443-c3b06f95f808"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
